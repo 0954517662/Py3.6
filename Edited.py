@@ -8,14 +8,13 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from googletrans import Translator
 import youtube_dl
-# I LOVE YOU 🇮🇩INDONESIA🇮🇩
+# กูรักประเทศไทย 🇹🇭
 
 cl = LineClient()
 #cl = LineClient(authToken='token')
 cl.log("Auth Token : " + str(cl.authToken))
 channel = LineChannel(cl)
 cl.log("Channel Access Token : " + str(channel.channelAccessToken))
-
 
 poll = LinePoll(cl)
 call = cl
@@ -92,7 +91,7 @@ wait = {
     "mention":"SINI KAK GABUNG CHAT AJH GA USAH NGINTIP😊",
     "Respontag":"I LOVE YOU BYEB",
     "welcome":"Selamat datang & semoga betah",
-    "comment":"Like By Fath",
+    "comment":"Like By SELFBOT-BY:MAX",
     "message":"Terimakasih sudah add saya 😃",
     }
 
@@ -240,7 +239,7 @@ def sendMention(to, mid, firstmessage):
         timeNow = datetime.now(tz=tz)
         eltime = time.time() - mulai
         bot = runtime(eltime)
-        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n⏩ Group : "+str(len(gid))+"\n⏩ Teman : "+str(len(teman))+"\n⏩ Expired : In "+hari+"\n⏩ Version : SELFBOT\n⏩ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n⏩ Runtime : \n • "+bot
+        text += mention+"◐ Jam : "+datetime.strftime(timeNow,'%H:%M:%S')+" Wib\n⏩ Group : "+str(len(gid))+"\n⏩ Teman : "+str(len(teman))+"\n⏩ Expired : In "+hari+"\n⏩ Version : SELFBOT-BY:MAX\n⏩ Tanggal : "+datetime.strftime(timeNow,'%Y-%m-%d')+"\n⏩ Runtime : \n • "+bot
         cl.sendMessage(to, text, {'MENTION': str('{"MENTIONEES":' + json.dumps(arr) + '}')}, 0)
     except Exception as error:
         cl.sendMessage(to, "[ INFO ] Error :\n" + str(error))
@@ -284,9 +283,9 @@ def command(text):
 def help():
     key = Setmain["keyCommand"]
     key = key.title()
-    helpMessage = "╭━━━━━━━━━━━━━━━━╮" + "\n" + \
+    helpMessage = "╭━━━━━━━━━━━━━━╮" + "\n" + \
                   "┃ ☠️☠️SELFBOT MENU ☠️☠️ " + "\n" + \
-                  "┣•━━━━━━━━━━━━━━━━" + "\n" + \
+                  "┣•━━━━━━━━━━━━━━" + "\n" + \
                   "┣│☠️│•" + key + "Runtime" + "\n" + \
 		              "┣│☠️│•" + key + "Mid @" + "\n" + \
                   "┣│☠️│•" + key + "Me\n" + \
@@ -338,7 +337,7 @@ def help():
                   "┣│☠️│•" + key + "Sticker「on/off」\n" + \
                   "┣│☠️│•" + key + "Respon「on/off」\n" + \
                   "┣│☠️│•" + key + "Contact「on/off」\n" + \
-                  "┣│👻│•" + key + "Autojoin「on/off」\n" + \
+                  "┣│☠️│•" + key + "Autojoin「on/off」\n" + \
                   "┣│☠️│•" + key + "Autoadd「on/off」\n" + \
                   "┣│☠️│•" + key + "Welcome「on/off」\n" + \
                   "┣│☠️│•" + key + "Autoleave「on/off」\n" + \
@@ -370,9 +369,9 @@ def help():
                   "┣│☠️│•" + key + "Set pesan:「Text」\n" + \
                   "┣│☠️│•" + key + "Set respon:「Text」\n" + \
                   "┣│☠️│•" + key + "Set welcome:「Text」\n" + \
-                  "┣•━━━━━━━━━━━━━━━━" + "\n" + \
-                  "┃ ☠️☠️BY FATHPRO☠️☠️ " + "\n" + \
-                  "╰━━━━━━━━━━━━━━━━╯"
+                  "┣•━━━━━━━━━━━━━━" + "\n" + \
+                  "┃ ☠️BY SELFBOT-BY:MAX ☠️ " + "\n" + \
+                  "╰━━━━━━━━━━━━━━╯"
     return helpMessage
 
 
@@ -1128,9 +1127,9 @@ def bot(op):
                           if wait["selfbot"] == True:
                             if msg._from in admin:
                                start = time.time()
-                               #cl.sendMessage(msg.to, "😂...😂")
+                               cl.sendMessage(msg.to, "[ กำลังวัดความยาวของควย ]")
                                elapsed_time = time.time() - start
-                               cl.sendMessage(msg.to, "{} detik".format(str(elapsed_time)))
+                               cl.sendMessage(msg.to, "{} เมตร".format(str(elapsed_time)))
 
                         elif cmd == "lurking on":
                           if wait["selfbot"] == True:
